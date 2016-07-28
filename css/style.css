@@ -1,0 +1,716 @@
+/*  Raster Xmas Game CSS */
+/*  v1.0.2 */
+
+
+@font-face {
+  font-family: 'Ubuntu';
+  src: url('../fonts/ubuntu-regular-webfont.eot');
+  src: url('../fonts/ubuntu-regular-webfont.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/ubuntu-regular-webfont.woff') format('woff'),
+       url('../fonts/ubuntu-regular-webfont.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Ubuntu';
+  src: url('../fonts/ubuntu-bold-webfont.eot');
+  src: url('../fonts/ubuntu-bold-webfont.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/ubuntu-bold-webfont.woff') format('woff'),
+    url('../fonts/ubuntu-bold-webfont.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+body{
+  background: #000;
+  width: 100%;
+  height: 100%;
+  font-family: Ubuntu;
+}
+
+@keyframes snow {
+  0% {background-position: 0px 0px, 0px 0px, 0px 0px;}
+  100% {background-position: 500px 1000px, 400px 400px, 300px 300px;}
+}
+
+@-moz-keyframes snow {
+  0% {background-position: 0px 0px, 0px 0px, 0px 0px;}
+  100% {background-position: 500px 1000px, 400px 400px, 300px 300px;}
+}
+
+@-webkit-keyframes snow {
+  0% {background-position: 0px 0px, 0px 0px, 0px 0px;}
+  100% {background-position: 500px 1000px, 400px 400px, 300px 300px;}
+}
+
+@-ms-keyframes snow {
+  0% {background-position: 0px 0px, 0px 0px, 0px 0px;}
+  100% {background-position: 500px 1000px, 400px 400px, 300px 300px;}
+}
+
+.falling-snow {
+  background-image: url('../images/snow.png'), url('../images/snow3.png'), url('../images/snow2.png');
+  -webkit-animation: snow 20s linear infinite;
+  -moz-animation: snow 20s linear infinite;
+  -ms-animation: snow 20s linear infinite;
+  animation: snow 20s linear infinite;
+  width: 100%;
+  height: 100%;
+}
+
+#viewport{
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  margin: auto;
+  width: 1024px;
+  height: 768px;
+}
+
+.abs{
+  position: absolute;
+}
+
+#loading{
+  position: absolute;
+  z-index: 1000;
+  background: url('../images/loading.gif') 50% 50% no-repeat;
+  width: 100%;
+  height: 100%;
+  display: none;
+}
+
+.screen{  
+  left: 0;
+  top: 0;
+  position: absolute;
+  background: #454648;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  display: none;
+}
+
+.screen.active{
+  display: block;
+}
+
+/*  Start  */
+
+#screen-start div{
+  position: absolute;
+  display: none;
+}
+
+.hill-back{
+  width: 1024px;
+  height: 768px;
+  background: url('../images/bg.jpg') 0% 0% no-repeat;
+}
+
+#start-trees-left{
+  background: url('../images/start_trees_left.png') 0% 0% no-repeat;
+  width: 156px;
+  height: 99px;
+  top: 464px;
+  left: 228px;
+}
+
+#start-trees-right{
+  background: url('../images/start_trees_right.png') 0% 0% no-repeat;
+  width: 205px;
+  height: 118px;
+  top: 455px;
+  left: 624px;
+}
+
+#start-raster{
+  background: url('../images/raster.png') 0% 0% no-repeat;
+  width: 269px;
+  height: 151px;
+  top: 452px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  display: block;
+}
+
+#start-snowman{
+  background: url('../images/snowman.png') 0% 0% no-repeat;
+  width: 69px;
+  height: 82px;
+  top: 511px;
+  left: 674px;
+}
+
+#start-logo{
+  background: url('../images/logo.png') 0% 0% no-repeat;
+  width: 531px;
+  height: 394px;
+  top: 45px;
+  left: 247px;
+  display: none;
+}
+
+#start-button{
+  background: url('../images/start.png') 0% 0% no-repeat;
+  width: 210px;
+  height: 73px;
+  bottom: 60px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  cursor: pointer;
+}
+
+progress{
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto;
+  display: block;
+  z-index: 2000;
+}
+
+
+/* Choose */ 
+
+#screen-choose{
+  background: url('../images/bg_choose.jpg') 0% 0% no-repeat;
+}
+
+#screen-choose div{
+  position: absolute;
+  display: none;
+}
+
+#choose-logo{
+  background: url('../images/logo_small.png') 0% 0% no-repeat;
+  width: 267px;
+  height: 197px;
+  top: 30px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+}
+
+#choose-button{
+  background: url('../images/choose.png') 0% 0% no-repeat;
+  width: 406px;
+  height: 62px;
+  bottom: 50px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+}
+
+.character{
+  width: 137px;
+  height: 180px;
+  cursor: pointer;
+}
+
+.character.loaded{
+  transition: all 0.2s ease-in-out;
+  -webkit-transition: all 0.2s ease-in-out;
+}
+
+.character.loaded:hover{
+  opacity: 0.9 !important;
+  transform: scale(1) !important;
+  -webkit-transform: scale(1) !important;
+}
+
+.character.pos0{
+  top: 260px;
+  left: 200px; 
+}
+
+.character.pos1{
+  top: 260px;
+  left: 365px;
+}
+
+.character.pos2{
+  top: 260px;
+  left: 524px;
+}
+
+.character.pos3{
+  top: 260px;
+  left: 682px;
+}
+
+.character.pos4{
+  top: 448px;
+  left: 273px;
+}
+
+.character.pos5{
+  top: 448px;
+  left: 438px;
+}
+
+.character.pos6{
+  top: 448px;
+  left: 594px;
+}
+
+#jani{
+  background: url('../images/jani.png') 0% 0% no-repeat;
+}
+
+#peti{
+  background: url('../images/peti.png') 0% 0% no-repeat;
+}
+
+#zoli{
+  background: url('../images/zoli.png') 0% 0% no-repeat;
+}
+
+#simi{
+  background: url('../images/simi.png') 0% 0% no-repeat;
+}
+
+#tomi{
+  background: url('../images/tomi.png') 0% 0% no-repeat;
+}
+
+#huni{
+  background: url('../images/huni.png') 0% 0% no-repeat;
+}
+
+#laci{
+  background: url('../images/laci.png') 0% 0% no-repeat;
+}
+
+
+/*  Game  */
+
+#screen-game{
+  background: #fff;
+}
+
+#score-box{
+  display: none;
+  position: absolute;
+  left: 20px;
+  top: 20px;
+  background: url('../images/score_bg.png') 0% 0% no-repeat;
+  width: 194px;
+  height: 97px;
+  z-index: 1000;
+}
+
+#score-box #score{
+  position: absolute;
+  right: 20px;
+  top: 28px;
+  color: #faf8f1;
+  font-weight: bold;
+  text-align: right;
+  font-size: 28px;
+}
+
+#lives-box{
+  display: none;
+  position: absolute;
+  z-index: 1000;
+  top: 20px;
+  right: 20px;
+  background: url('../images/lives_bg.png') 0% 0% no-repeat;
+  width: 195px;
+  height: 96px;
+}
+
+#lives-box #head{
+  position: absolute;
+  right: 22px;
+  top: 14px;
+}
+
+#lives-box #head.jani{
+  background: url('../images/jani_head.png') 0% 0% no-repeat;
+  width: 40px;
+  height: 58px;
+}
+
+#lives-box #head.peti{
+  background: url('../images/peti_head.png') 0% 0% no-repeat;
+  width: 40px;
+  height: 66px;
+}
+
+#lives-box #head.zoli{
+  background: url('../images/zoli_head.png') 0% 0% no-repeat;
+  width: 41px;
+  height: 63px;
+  right: 24px;
+}
+
+#lives-box #head.simi{
+  background: url('../images/simi_head.png') 0% 0% no-repeat;
+  width: 46px;
+  height: 67px;  
+}
+
+#lives-box #head.tomi{
+  background: url('../images/tomi_head.png') 0% 0% no-repeat;
+  width: 44px;
+  height: 63px;  
+}
+
+#lives-box #head.huni{
+  background: url('../images/huni_head.png') 0% 0% no-repeat;
+  width: 42px;
+  height: 61px;  
+}
+
+#lives-box #head.laci{
+  background: url('../images/laci_head.png') 0% 0% no-repeat;
+  width: 56px;
+  height: 57px;  
+  right: 15px;
+}
+
+#lives-box .life{
+  position: absolute;
+  width: 29px;
+  height: 23px;
+  background: url('../images/life.png') 0% 0% no-repeat;
+  top: 33px;
+}
+
+#lives-box #life1{
+  left: 15px;
+}
+
+#lives-box #life2{
+  left: 50px;
+}
+
+#lives-box #life3{
+  left: 85px;
+}
+
+#lives-box .life.death{
+  background: url('../images/death.png') 0% 0% no-repeat;
+}
+
+#level-box{
+  display: none;
+  position: absolute;
+  z-index: 1000;
+  top: 20px;
+  right: 250px;
+  background: url('../images/level.png') 0% 0% no-repeat;
+  width: 88px;
+  height: 96px;
+}
+
+#level-box #level-label{
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  bottom: 25px;
+  color: #faf8f1;
+  font-weight: bold;
+  display: block;
+  text-align: center;
+}
+
+#level-box #level{
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+  top: 12px;
+  color: #faf8f1;
+  font-weight: bold;
+  display: block;
+  text-align: center;
+  font-size: 50px;
+}
+
+#debug{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  color: #000;
+}
+
+#ready, #steady, #go, #game-over{
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  display: none;
+}
+
+#ready{
+  background: url('../images/ready.png') 0% 0% no-repeat;
+  width: 266px;
+  height: 92px;
+}
+
+#steady{
+  background: url('../images/steady.png') 0% 0% no-repeat;
+  width: 165px;
+  height: 90px;
+}
+
+#go{
+  background: url('../images/go.png') 0% 0% no-repeat;
+  width: 171px;
+  height: 74px;
+}
+
+#guide{
+  position: absolute;
+  width: 86px;
+  height: 45px;
+  background: url('../images/guide.png') 0% 0% no-repeat;
+  top: 45px;
+  left: 235px;
+  display: none;
+}
+
+#game-over{
+  background: url('../images/game_over.png') 0% 0% no-repeat;
+  width: 549px;
+  height: 122px;
+}
+
+#end-score{
+  background: url('../images/end_score.png') 0% 0% no-repeat;
+  width: 246px;
+  height: 85px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+  bottom: 200px;  
+  display: none;
+}
+
+#end-score-nr{
+  color: #f3e2b7;
+  font-weight: bold;
+  line-height: 85px;
+  text-align: right;
+  font-size: 40px;
+  padding-right: 20px;
+}
+
+#touch_left, #touch_right{
+  height: 500px;
+  top: 168px;
+  width: 200px;
+  z-index: 1000;
+  position: absolute;
+}
+
+#touch_left{
+  left: 0;
+}
+
+#touch_right{
+  right: 0;
+}
+
+.touch{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: none;
+  background: #65d6e0 url('../images/touch.png') 50% 50% no-repeat;
+}
+
+/*  High score  */
+
+#screen-highscore div{
+  position: absolute;
+  display: none;
+}
+
+#highscore-left{
+  background: url('../images/hs_left.png') 0% 0% no-repeat;
+  width: 246px;
+  height: 289px;
+  top: 418px;
+  left: 12px;
+}
+
+#highscore-right{
+  background: url('../images/hs_right.png') 0% 0% no-repeat;
+  width: 373px;
+  height: 339px;
+  top: 411px;
+  left: 651px;
+}
+
+#highscore-table{
+  background: url('../images/highscore_table.png') 0% 0% no-repeat;
+  width: 556px;
+  height: 630px;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto;
+}
+
+#highscore-logo{
+  background: url('../images/hs_logo.png') 0% 0% no-repeat;
+  width: 197px;
+  height: 146px;
+  top: 30px;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+#highscore-title{
+  background: url('../images/highscore_title.png') 0% 0% no-repeat;
+  width: 308px;
+  height: 54px;
+  top: 189px;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+#rank1, #rank2, #rank3, #rank4{
+  width: 83px;
+  height: 85px;
+  left: 31px;
+  display: block !important;
+}
+
+#rank1{
+  background: url('../images/rank1.png') 0% 0% no-repeat;
+  top: 254px;
+}
+
+#rank2{
+  background: url('../images/rank2.png') 0% 0% no-repeat;
+  top: 334px;
+}
+
+#rank3{
+  background: url('../images/rank3.png') 0% 0% no-repeat;
+  top: 414px;
+}
+
+#rank4{
+  background: url('../images/rank4.png') 0% 0% no-repeat;
+  top: 494px;
+}
+
+.highscore{
+  display: block !important;
+  left: 120px;
+  width: 385px;
+  height: 61px;
+  line-height: 60px;
+  font-size: 15px;
+  font-weight: bold;
+  color: #4c4d44;
+  padding-right: 5px;
+  background: url('../images/highscore.png') 100% 0% no-repeat;
+}
+
+.score.jani{
+  background: url('../images/hs_jani.png') 100% 50% no-repeat;
+}
+
+.score.peti{
+  background: url('../images/hs_peti.png') 100% 50% no-repeat;
+}
+
+.score.zoli{
+  background: url('../images/hs_zoli.png') 100% 50% no-repeat;
+}
+
+.score.simi{
+  background: url('../images/hs_simi.png') 100% 50% no-repeat;
+}
+
+.score.laci{
+  background: url('../images/hs_laci.png') 100% 50% no-repeat;
+}
+
+.score.tomi{
+  background: url('../images/hs_tomi.png') 100% 50% no-repeat;
+}
+
+.score.huni{
+  background: url('../images/hs_huni.png') 100% 50% no-repeat;
+}
+
+#hs1{
+  top: 271px;
+}
+
+#hs2{
+  top: 350px;
+}
+
+#hs3{
+  top: 429px;
+}
+
+#hs4{
+  top: 506px;
+}
+
+#highscore-table .highscore div{
+  position: static;
+  display: inline;
+}
+
+.player-name{
+  float: left;
+}
+
+.highscore .score{
+  float: right;
+  margin-right: 0px;
+  padding-right: 51px;
+  color: #faf8f1;
+  font-size: 17px;
+}
+
+#new-player-name{
+  background: transparent;
+  width: 265px;
+  height: 50px;
+  border: 0;
+  outline: 0;
+  color: #4c4d44;
+  font-weight: bold;
+  font-size: 15px;
+}
+
+#sound{
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  width: 64px;
+  height: 70px;
+  cursor: pointer;
+  background: url('../images/sound_on.png') 0% 0% no-repeat;
+  z-index: 1000;
+}
+
+#sound.muted{
+  background: url('../images/sound_off.png') 0% 0% no-repeat;
+}

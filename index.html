@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+  <head>    
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=1024">
+    <link media="all" href="css/normalize.css" type="text/css" rel="stylesheet" />
+    <link media="all" href="css/style.css?v1.0.2" type="text/css" rel="stylesheet" />
+    <title>Csússz velünk</title>
+  </head>
+  <body>
+    <div id="viewport">
+      <div id="loading"></div>
+      <div id="sound"></div>
+      <progress value="0" max="100">Loading</progress>
+      
+      <div id="screen-start" class="screen">        
+        <div class="hill-back"></div>        
+        <div id="start-trees-left"></div>
+        <div id="start-trees-right"></div>
+        <div id="start-raster"></div>
+        <div id="start-snowman"></div>        
+        <div id="start-logo"></div>
+        <div class="falling-snow"></div>        
+        <div id="start-button"></div>
+      </div>
+      
+      <div id="screen-choose" class="screen">
+        <div id="choose-logo"></div>
+        <div class="character pos0"></div>
+        <div class="character pos1"></div>
+        <div class="character pos2"></div>
+        <div class="character pos3"></div>
+        <div class="character pos4"></div>
+        <div class="character pos5"></div>
+        <div class="character pos6"></div>
+        <div id="choose-button"></div>
+      </div>
+      
+      <div id="screen-game" class="screen">
+        <canvas id="game-stage"></canvas>
+        <div id="score-box">
+          <div id="score"></div>
+        </div>
+        <div id="lives-box">
+          <div id="head"></div>
+          <div id="life1" class="life"></div>
+          <div id="life2" class="life"></div>
+          <div id="life3" class="life"></div>
+        </div> 
+        <div id="level-box">
+          <div id="level"></div>
+          <!--<div id="level-label">pálya</div>-->
+        </div>
+        <div id="ready"></div>
+        <div id="steady"></div>
+        <div id="go"></div>
+        <div id="guide"></div>
+        <div id="game-over"></div>
+        <div id="end-score">
+          <div id="end-score-nr"></div>
+        </div>
+        <div id="debug"></div>
+        <div id="touch_left">
+          <div class="touch"></div>
+        </div>
+        <div id="touch_right">
+          <div class="touch"></div>
+        </div>
+      </div>
+      <div id="screen-highscore" class="screen">
+        <div class="hill-back"></div>        
+        <div id="highscore-left"></div>
+        <div id="highscore-right"></div>
+        <div class="falling-snow"></div>
+        <div id="highscore-table">
+          <div id="highscore-logo"></div>
+          <div id="highscore-title"></div>
+          <div id="rank1"></div>
+          <div id="rank2"></div>
+          <div id="rank3"></div>
+          <div id="rank4"></div>
+          <div id="hs1" class="highscore"></div>
+          <div id="hs2" class="highscore"></div>
+          <div id="hs3" class="highscore"></div>
+          <div id="hs4" class="highscore"></div>
+        </div>
+        
+      </div>
+    </div>
+    
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.2/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="http://crypto-js.googlecode.com/svn/tags/3.1.2/build/rollups/md5.js"></script>
+    <script type="text/javascript" src="js/gsap/TweenMax.min.js"></script>
+    <script type="text/javascript" src="js/game_engine.js"></script>
+    <script type="text/javascript" src="js/raster.js?v1.0.6"></script>
+    
+    <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-41765190-1', 'auto');
+    ga('send', 'pageview');
+
+  </script>
+  </body>
+</html>
