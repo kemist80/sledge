@@ -1030,7 +1030,7 @@ Raster.renderGame = function() {
 Raster.getHighScores = function(callback){
     $.ajax({
       type: 'GET',
-      url: 'http://rasterstudio.hu/api/xmas_scores',
+      url: 'https://rasterstudio.hu/api/xmas_scores',
       data: '',
       dataType: 'json',
       cache: false,
@@ -1065,7 +1065,7 @@ Raster.storeHighScore = function(name){
   
     $.ajax({
       type: 'POST',
-      url: 'http://rasterstudio.hu/api/xmas_highscore',
+      url: 'https://rasterstudio.hu/api/xmas_highscore',
       data: 'hash='+escape(hash)+'&name='+name+'&score='+Raster.game.score+'&level='+Raster.game.level+'&character='+escape(Raster.character),
       dataType: 'json',
       cache: false,
